@@ -2,13 +2,16 @@
   "name": "change-observer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "jest __test__/array.test.js",
     "build": "webpack --config webpack.config.js",
     "rollup": "rollup --config rollup.config.js -f umd",
     "coverage": "jest --coverage"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
