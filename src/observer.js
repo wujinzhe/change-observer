@@ -26,8 +26,6 @@ function Observer(data, fn) {
         watch.fn(newValue[watch.key], oldValue[watch.key])
       }
     })
-
-    this.watchList = [] // 执行完后，清空队列
   })
 
   // Proxy的get Handler

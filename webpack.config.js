@@ -8,7 +8,6 @@ module.exports = {
   },
   output: {
     libraryTarget: 'umd',
-    libraryExport: 'default',
     library: "Observer",
     globalObject: "this" // webpack v5添加的新属性，需要制定全局的值，在umd的模式下
   },
