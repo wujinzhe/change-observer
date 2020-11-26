@@ -14,13 +14,14 @@ test('array', (done) => {
   const c = new Observer(obj, (watcher) => {
 
     watcher((newValue, oldValue) => {
+      console.log('newValue', newValue)
       expect(newValue).toEqual({
         a: '333',
         obj: {
           name: 'yyy',
           ooo: 'ooo'
         },
-        list: [1,2,3,4,{name: 111},{lala: 111}]
+        list: [1,2,3,4,{name: 111},{lala: 111},{lala: 111}]
       })
       expect(oldValue).toEqual(copyObj)
       done()
@@ -32,6 +33,7 @@ test('array', (done) => {
   c.obj.ooo = 'ooo'
   c.list.push({name: 111})
   c.list = c.list.concat([{lala: 111}])
+  c.list = []
 })
 
 

@@ -33,20 +33,7 @@ const c = new Observer({
   watcher((newValue, oldValue) => {
     console.log('newValue', newValue)
     console.log('oldValue', oldValue)
-    // expect(oldValue).toEqual({
-    //   a: 1,
-    //   b: 2,
-    //   list: [1,2,3,4]
-    // })
 
-    // expect(newValue).toEqual({
-    //   a: 123,
-    //   b: [1,1,1],
-    //   list: [4,2,3,4,{name: 111}]
-    // })
-    // console.log('list =====')
-    // console.log('newValue', newValue)
-    // console.log('oldValue', oldValue)
   })
 
 
@@ -60,6 +47,6 @@ console.log('c', c.c.c[1])
 // c.b = [1,1,1]
 c.list = c.list.concat([{lala: 111}])
 
-// setTimeout(() => {
-//   c.a = 456
-// }, 500);
+setTimeout(() => {
+  c.a = 456
+}, 1000);
