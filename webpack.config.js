@@ -2,9 +2,9 @@ const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
-    main: './index.js'
+    main: './src/observer.js'
   },
   output: {
     libraryTarget: 'umd',

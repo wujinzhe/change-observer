@@ -24,9 +24,10 @@ function isArray(value) {
 }
 
 
-/** 调度器 */
+/** 调度器 
+ * 想要在下一次微任务中来依次执行改变的回调
+*/
 function Scheduler(originData, fn) {
-  // console.log('origindata', originData)
   this._originData = deepCopy(originData)
   this.list = []
   this.callback = fn || function(data){}

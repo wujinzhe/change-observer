@@ -1,1 +1,0 @@
-const Observer = require('../dist/observer.js')
