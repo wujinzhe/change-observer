@@ -29,11 +29,7 @@ function Observer(data, fn) {
   })
 
   // Proxy的get Handler
-  this.getHandler = function getHandler(target, props, receiver) {    
-    // console.log('target', target)
-    // console.log('props', props)
-    // console.log('value', target[props])
-    // console.log('==========')
+  this.getHandler = function getHandler(target, props, receiver) {
     /**
      * TODO: 解决数组调用contact报错的问题，后面再详细看看这个问题
      */

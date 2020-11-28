@@ -2,14 +2,18 @@
 
 一个极小的js原生对象的数据监听库
 
-用法
+## 介绍
 
-安装
+这是一个能够监听原生的js对象做出的改变，使用起来十分的简单
+
+## 安装
+
 ```npm i change-observer -S```
 
-使用
+## 用法
+
 ```JS
-const Observer = require('change-observer')
+import Observer from 'change-observer'
 
 var obj = {
     a: 1,

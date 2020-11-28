@@ -1,33 +1,4 @@
-const { deepCopy, isPrimitiveObject, isPrimitiveValue, isValidProperty } = require('../src/utils.js')
-
-test('deepCopy object', () => {
-  var obj = {
-    a: 1,
-    b: 2,
-    c: 3,
-    d: [1, 2, 3, 4],
-    f: {
-      a: 1,
-      d: [1, 2, 3, 4]
-    }
-  }
-  expect(deepCopy(obj)).toEqual(obj)
-})
-
-test('deepCopy number', () => {
-
-  var obj1 = 1
-  expect(deepCopy(obj1)).toEqual(obj1)
-})
-
-test('deepCopy array', () => {
-  var obj2 = [1, 2, {
-    a: 1,
-    b: 2,
-    c: [1, 2, 3]
-  }]
-  expect(deepCopy(obj2)).toEqual(obj2)
-})
+const { isPrimitiveObject, isPrimitiveValue, isValidProperty } = require('../src/utils.js')
 
 test('isPrimitiveObject object', () => {
   var obj2 = {

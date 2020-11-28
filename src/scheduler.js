@@ -1,4 +1,14 @@
-const { deepCopy } = require('./utils')
+const deepCopy = require('deepcopy')
+
+function nextTick(fn) {
+  // TODO: 目前使用Promise作为nextTick函数，后续还需要根据具体环境使用不同的nextTick
+  if (Promise) {
+    return Promise.resolve().then(fn)
+  } else {
+    // 如果没有Promise 则使用setTimeout （宏任务）
+    return setTimeout(fn, 0);
+  }
+}
 
 /** 调度器 
  * 想要在下一次微任务中来依次执行改变的回调
@@ -38,14 +48,12 @@ function Scheduler(originData, fn = () => {}) {
   Scheduler.prototype.collect  = function collect(data) {
     // 如果是初始化状态，需要执行一个Promise
     if (this.status === 0) {
-      Promise.resolve().then(() => {
-        
+      nextTick(() => {
         let newValue = deepCopy(this.data)
         const rootProps = [] // 改动属性的根属性
 
         this.list.forEach(item => {
           rootProps.push(item.path[0])
-
           newValue = setValue(newValue, item.path, item.newValue)
         })
 

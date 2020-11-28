@@ -12,8 +12,13 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wujinzhe/change-observer"
+  },
+  "homepage": "https://github.com/wujinzhe/change-observer",
+  "keywords": ["observer", "js", "change", "data", "change-observer", "store"],
+  "author": "wujinzhe <1037680926@qq.com>",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3",
@@ -21,5 +26,8 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.1.3",
     "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "deepcopy": "^2.1.0"
   }
 }
