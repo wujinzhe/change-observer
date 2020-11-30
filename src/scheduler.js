@@ -1,4 +1,4 @@
-const deepCopy = require('deepcopy')
+import { deepCopy } from './utils'
 
 function nextTick(fn) {
   // TODO: 目前使用Promise作为nextTick函数，后续还需要根据具体环境使用不同的nextTick
@@ -75,4 +75,4 @@ function Scheduler(originData, fn = () => {}) {
   }
 }
 
-module.exports = Scheduler
+export default Scheduler

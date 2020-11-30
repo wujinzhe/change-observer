@@ -1,5 +1,5 @@
-const Scheduler = require('./scheduler')
-const { isValidProperty, isPrimitiveValue } = require('./utils')
+import Scheduler from './scheduler'
+import { isValidProperty, isPrimitiveValue } from './utils'
 const globalKey = Symbol() // 指定监听全局时候的key
 
 function Observer(data, fn) {
@@ -110,4 +110,4 @@ function Observer(data, fn) {
   return new Proxy(this.data, this.handler)
 }
 
-module.exports = Observer;
+export default Observer;

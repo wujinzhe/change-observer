@@ -1,4 +1,4 @@
-const { isPrimitiveObject, isPrimitiveValue, isValidProperty } = require('../src/utils.js')
+import { isPrimitiveObject, isPrimitiveValue } from '../src/utils.js'
 
 test('isPrimitiveObject object', () => {
   var obj2 = {

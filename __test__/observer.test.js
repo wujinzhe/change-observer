@@ -1,7 +1,6 @@
-const Observer = require('../src/observer.js')
-const deepCopy = require('deepcopy')
-// const { deepCopy } = require('../src/utils')
-// console.log("Observer", Observer)
+import Observer from '../src/observer.js'
+import { deepCopy } from '../src/utils'
+
 test('array', (done) => {
   var obj = {
     a: 1,
@@ -57,19 +56,19 @@ test('watch props', (done) => {
   c.a = '333'
 })
 
-test('watch date', (done) => {
-  var obj = {
-    d: new Date('2020-10-10')
-  }
+// test('watch date', (done) => {
+//   var obj = {
+//     d: new Date('2020-10-10')
+//   }
 
-  const c = new Observer(obj, (watcher) => {
+//   const c = new Observer(obj, (watcher) => {
 
-    watcher('d', (newValue, oldValue) => {
-      expect(newValue).toEqual(new Date('2020-10-11'))
-      expect(oldValue).toEqual(new Date('2020-10-10'))
-      done()
-    })
-  })
+//     watcher('d', (newValue, oldValue) => {
+//       expect(newValue).toEqual(new Date('2020-10-11'))
+//       expect(oldValue).toEqual(new Date('2020-10-10'))
+//       done()
+//     })
+//   })
 
-  c.d = new Date('2020-10-11')
-})
+//   c.d = new Date('2020-10-11')
+// })

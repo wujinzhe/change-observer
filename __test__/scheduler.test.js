@@ -1,4 +1,4 @@
-const Scheduler = require('../src/scheduler')
+import Scheduler from '../src/scheduler'
 
 test('sync change', (done) => {
   var obj = {

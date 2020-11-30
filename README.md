@@ -26,6 +26,7 @@ var obj = {
   const c = new Observer(obj, (watcher) => {
 
     watcher((newValue, oldValue) => {
+      console.log(oldValue)
       /* oldValue 
         {
           a: 1,
@@ -36,6 +37,7 @@ var obj = {
         }
       */
 
+      console.log(newValue)
       /* newValue
         {
           a: '333',
@@ -49,8 +51,8 @@ var obj = {
     })
 
     watcher('a', (newValue, oldValue) => {
-      // newValue '333'
-      // oldValue 1
+      console.log(newValue) // '333'
+      console.log(oldValue) // 1
     })
   })
 
