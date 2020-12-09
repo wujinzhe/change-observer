@@ -1,5 +1,5 @@
 import Scheduler from './scheduler'
-import { isValidProperty, isPrimitiveValue } from './utils'
+import { isValidProperty, isPrimitiveValue, compareValue } from './utils'
 const globalKey = Symbol() // 指定监听全局时候的key
 
 function Observer(data, fn) {
@@ -68,15 +68,16 @@ function Observer(data, fn) {
 
     // 当前对象的属性，只有是有效属性时，才可以触发修改监听（watch）
     if (isValidProperty(target, props)) {
-
       const currentTargetPath = this.pathCache.get(target)
-
-      // 收集同步更新的字段
-      this.scheduler.collect({
-        oldValue,
-        newValue: value,
-        path: currentTargetPath.concat(props)
-      })
+      // 如果两个值不相等 才收集依赖
+      if (!compareValue(value, oldValue)) {
+        // 收集同步更新的字段
+        this.scheduler.collect({
+          oldValue,
+          newValue: value,
+          path: currentTargetPath.concat(props)
+        })
+      }
     }
 
     return result

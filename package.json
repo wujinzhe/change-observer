@@ -38,7 +38,5 @@
     "webpack": "^5.1.3",
     "webpack-cli": "^4.1.0"
   },
-  "dependencies": {
-    "deepcopy": "^2.1.0"
-  }
+  "dependencies": {}
 }
