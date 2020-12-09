@@ -1,0 +1,18 @@
+<view>{{ name }}</view>
+
+<view>
+组件
+<!-- <demo /> -->
+</view>
+
+<view class="nav" bind:tap="change">
+  改变
+</view>
+
+<view class="nav" bind:tap="change1">
+  改变1
+</view>
+
+<view class="nav" bind:tap="next">
+  下一页
+</view>

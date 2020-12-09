@@ -1,0 +1,264 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "node_modules"
+      },
+      {
+        "type": "folder",
+        "value": "other"
+      },
+      {
+        "type": "folder",
+        "value": "image"
+      },
+      {
+        "type": "folder",
+        "value": "pages/home2"
+      }
+    ]
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": false,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.0",
+  "appid": "wx9fce1dd679751b66",
+  "projectname": "%E4%B8%B0%E5%9F%8E%E4%B8%93%E8%BF%90",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "subpackage/pages/highQuality/index",
+          "pathName": "subpackage/pages/highQuality/index",
+          "query": "tabIndex=0",
+          "scene": 1014
+        },
+        {
+          "name": "我的二维码",
+          "pathName": "subpackage/pages/highQualitySuccess/index",
+          "query": "scene=13048897089",
+          "scene": null
+        },
+        {
+          "name": "详情",
+          "pathName": "subpackage/pages/highQualityDetail/index",
+          "query": "isFhSchool=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "rsa加密测试",
+          "pathName": "pages/rsa/rsa",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "预约成功",
+          "pathName": "subpackage/pages/highQualitySuccess/index",
+          "query": "orderNo=11",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "反馈成功",
+          "pathName": "pages/feedback/success/index",
+          "query": "isLogin=true",
+          "scene": null
+        },
+        {
+          "name": "精品搬家详情",
+          "pathName": "subpackage/pages/highQualityOrderDetail/index",
+          "query": "orderNo=U20201112000004",
+          "scene": null
+        },
+        {
+          "name": "联系人",
+          "pathName": "subpackage/pages/highQualityContact/index",
+          "query": "type=out",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "查单",
+          "pathName": "pages/my/orderCheck/orderCheck",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "实时位置",
+          "pathName": "pages/my/map/index",
+          "query": "orderNo=U20200529000007&orderStatus=2&orderCategory=2",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "取消",
+          "pathName": "pages/my/cancel/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 12,
+          "name": "车型选择",
+          "pathName": "pages/home/components/SelectCar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "活动页",
+          "pathName": "pages/ActivityShow/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "计价规则",
+          "pathName": "pages/ChargeRules/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "618",
+          "pathName": "pages/ActivityRule/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "订单详情",
+          "pathName": "pages/home/order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "home",
+          "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "确认订单",
+          "pathName": "pages/home/order-confirm/order-confirm",
+          "query": "useCarType=0&city=undefined",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/order-confirm/order-confirm",
+          "pathName": "pages/home/order-confirm/order-confirm",
+          "query": "useCarType=0&orderCategory=2&city=undefined",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/order/index",
+          "pathName": "pages/home/order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "发票",
+          "pathName": "subpackage/pages/invoiceInfo/index",
+          "query": "price=781&orderNos=[\"U20200820000013\"]",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "详情",
+          "pathName": "subpackage/pages/order-details/index",
+          "query": "orderNo=U20200826000015",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "定制城配",
+          "pathName": "subpackage/pages/custom/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "sourceType=ad",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "isFhSchool=1",
+          "scene": null
+        },
+        {
+          "id": 26,
+          "name": "subpackage/pages/enterpriseRemark/index",
+          "pathName": "subpackage/pages/enterpriseRemark/index",
+          "query": "source=Out&latitude=22.53332&longitude=113.93041&name=南头南山区政府大楼(桃园路北)&address=广东省深圳市南山区桃园路2号",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
