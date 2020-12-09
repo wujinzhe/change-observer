@@ -1,4 +1,4 @@
-import Scheduler from '../src/scheduler'
+import Scheduler from '../src/core/scheduler'
 
 test('sync change', (done) => {
   var obj = {

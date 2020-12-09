@@ -1,15 +1,21 @@
-import Observer from '../src/observer.js'
-import { deepCopy } from '../src/utils'
+import Observer from '../src/core/observer.js'
 
 test('array', (done) => {
-  var obj = {
+  var copyObj = {
     a: 1,
     obj: {
       name: 'xxx'
     },
-    list: [1,2,3,4]
+    list: [1,2,3,4],
+    date: new Date('2020-10-10')
+  }, obj = {
+    a: 1,
+    obj: {
+      name: 'xxx'
+    },
+    list: [1,2,3,4],
+    date: new Date('2020-10-10')
   }
-  const copyObj = deepCopy(obj)
 
   const c = new Observer(obj, (watcher) => {
 
@@ -20,7 +26,8 @@ test('array', (done) => {
           name: 'yyy',
           ooo: 'ooo'
         },
-        list: [1,2,3,4,{name: 111},{lala: 111}]
+        list: [1,2,3,4,{name: 111},{lala: 111}],
+        date: new Date('2020-10-10')
       })
       expect(oldValue).toEqual(copyObj)
       done()
@@ -54,6 +61,48 @@ test('watch props', (done) => {
   })
 
   c.a = '333'
+})
+
+test('watch unchanged', (done) => {
+  var obj = {
+    a: 1
+  }
+  var count = 1
+
+  const c = new Observer(obj, (watcher) => {
+
+    watcher('a', (newValue, oldValue) => {
+      count = 2
+    })
+
+    setTimeout(() => {
+      expect(count).toEqual(1)
+      done()
+    }, 10);
+  })
+
+  c.a = 1
+})
+
+test('watch changed', (done) => {
+  var obj = {
+    a: 1
+  }
+  var count = 1
+
+  const c = new Observer(obj, (watcher) => {
+
+    watcher('a', (newValue, oldValue) => {
+      count = 2
+    })
+
+    setTimeout(() => {
+      expect(count).toEqual(2)
+      done()
+    }, 10);
+  })
+
+  c.a = 'aaa'
 })
 
 // test('watch date', (done) => {
