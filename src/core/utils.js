@@ -80,7 +80,8 @@ function deepCopy(data) {
     const subType = getType(item)
 
     cloneData[i] = (subType === 'Array' || subType === 'Object')
-      ? deepCopy(item) : item
+                    ? deepCopy(item)
+                    : item
   }
 
   return cloneData
